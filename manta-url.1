@@ -1,0 +1,44 @@
+.TH MANTA-URL 1 "manta-url v1.0.0" "Manta Tools" "User Commands"
+.SH NAME
+manta-url \- URL shortener and validator for the command line
+.SH SYNOPSIS
+.B url <command> [options] <url>
+.SH DESCRIPTION
+Validate URL format, expand shortened URLs (follow redirects), and extract URL components (scheme, host, path, params, query, fragment). Zero external dependencies.
+.SH COMMANDS
+.TP
+.B validate <url>
+Check if a URL is well-formed
+.TP
+.B expand <url>
+Follow redirects to resolve shortened URLs
+.TP
+.B parse <url>
+Extract and display URL components
+.SH OPTIONS
+.TP
+.B --version
+Show version and exit
+.SH EXAMPLES
+.TP
+Validate a URL
+.B url validate https://example.com
+.TP
+Expand a shortened URL
+.B url expand https://bit.ly/3abc123
+.TP
+Parse URL components
+.B url parse https://example.com/path?q=hello#section
+.SH EXIT CODES
+.TP
+.B 0
+Success
+.TP
+.B 1
+Invalid URL or error
+.SH AUTHOR
+Bobby Hansen Jr. (Hansen Capital Group LLC)
+.SH REPORTING BUGS
+https://github.com/jrbobbyhansen-pixel/url/issues
+.SH COPYRIGHT
+Copyright 2026 Hansen Capital Group LLC. License MIT.
